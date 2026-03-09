@@ -2,11 +2,44 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/H-c-anh-v-n/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>edmicro-clone</title>
-    <script type="module" crossorigin src="/H-c-anh-v-n/assets/index-BGQ5WbiQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/H-c-anh-v-n/assets/index-nF8nDwu1.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- CÁC THẺ CẦN THÊM ĐỂ LÀM ỨNG DỤNG PWA TOÀN MÀN HÌNH -->
+    <meta name="theme-color" content="#1e3a8a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EngMaster">
+    
+    <!-- Liên kết đến file manifest -->
+    <link rel="manifest" href="/H-c-anh-v-n/manifest.json" />
+
+    <!-- ✨ MATHJAX 3 - HỖ TRỢ KÝ HIỆU TOÁN HỌC VÀ VẬT LÝ -->
+    <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']],
+          processEscapes: true,
+          processEnvironments: true
+        },
+        svg: {
+          fontCache: 'global'
+        },
+        startup: {
+          pageReady: () => {
+            return MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+          }
+        }
+      };
+    </script>
+
+    <title>EngMaster</title>
+    <script type="module" crossorigin src="/H-c-anh-v-n/assets/index-4BTlaeqS.js"></script>
+    <link rel="stylesheet" crossorigin href="/H-c-anh-v-n/assets/index-Bxar7jpo.css">
   </head>
   <body>
     <div id="root"></div>
